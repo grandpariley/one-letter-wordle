@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>One letter wordle</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <button class="header-button"><span class="material-icons">help_outline</span></button>
+            <h1>one letter wordle</h1>
+            <div class="header-menu">
+                <button class="header-button"><span class="material-icons">leaderboard</span></button>
+                <button class="header-button"><span class="material-icons">settings</span></button>
+            </div>
+        </header>
+        <article>
+            <div class="board">
+                <div class="row">
+                    <input class="tile" type="text" name="tile1" maxlength="1" />
+                </div>
+                <div class="row">
+                    <input class="tile" type="text" name="tile2" maxlength="1" />
+                </div>
+                <div class="row">
+                    <input class="tile" type="text" name="tile3" maxlength="1" />
+                </div>
+                <div class="row">
+                    <input class="tile" type="text" name="tile4" maxlength="1" />
+                </div>
+                <div class="row">
+                    <input class="tile" type="text" name="tile5" maxlength="1" />
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="keyboard">
+                <div class="keyboard-row">
+                    <button class="keyboard-key" id="q">q</button>
+                    <button class="keyboard-key" id="w">w</button>
+                    <button class="keyboard-key" id="e">e</button>
+                    <button class="keyboard-key" id="r">r</button>
+                    <button class="keyboard-key" id="t">t</button>
+                    <button class="keyboard-key" id="y">y</button>
+                    <button class="keyboard-key" id="u">u</button>
+                    <button class="keyboard-key" id="i">i</button>
+                    <button class="keyboard-key" id="o">o</button>
+                    <button class="keyboard-key" id="p">p</button>
+                </div>
+                <div class="keyboard-row">
+                    <button class="keyboard-key" id="a">a</button>
+                    <button class="keyboard-key" id="s">s</button>
+                    <button class="keyboard-key" id="d">d</button>
+                    <button class="keyboard-key" id="f">f</button>
+                    <button class="keyboard-key" id="g">g</button>
+                    <button class="keyboard-key" id="h">h</button>
+                    <button class="keyboard-key" id="j">j</button>
+                    <button class="keyboard-key" id="k">k</button>
+                    <button class="keyboard-key" id="l">l</button>
+                </div>
+                <div class="keyboard-row">
+                    <button class="keyboard-key" id="enter">enter</button>
+                    <button class="keyboard-key" id="z">z</button>
+                    <button class="keyboard-key" id="x">x</button>
+                    <button class="keyboard-key" id="c">c</button>
+                    <button class="keyboard-key" id="v">v</button>
+                    <button class="keyboard-key" id="b">b</button>
+                    <button class="keyboard-key" id="n">n</button>
+                    <button class="keyboard-key" id="m">m</button>
+                    <button class="keyboard-key" id="backspace">
+                        <span class="material-icons">backspace</span>
+                    </button>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
