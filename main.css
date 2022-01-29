@@ -1,108 +1,178 @@
 * {
-    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
-    background-color: black;
-    color: #d7dadc;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
+  background-color: black;
+  color: #d7dadc;
+  display: flex;
+  justify-content: center;
 }
 
 main {
-    width: 48rem;
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 2rem;
+  width: 48rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 2rem;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid #565758;
-    font-size: 1rem;
-    height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #565758;
+  font-size: 1rem;
+  height: 3rem;
+  text-transform: uppercase;
 }
 
 h1 {
-    font-weight: 700;
-    font-size: 2rem;
-    letter-spacing: 0.2rem;
-}
-
-.header-menu {
-    display: flex;
-    align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
 }
 
 .header-button {
-    text-decoration: none;
-    cursor: pointer;
-    background-color: black;
-    color: #565758;
-    border: none;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: black;
+  color: #565758;
+  border: none;
 }
 
 article {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .board {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 1rem;
 }
 
 .row {
-    width: 4rem;
-    height: 4rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .tile {
-    height: 100%;
-    width: 100%;
-    border: 2px solid #565758;
-    border-radius: 0.1rem;
-    background-color: black;
-    color: #d7dadc;
-    font-size: 2rem;
-    text-align: center;
+  height: 100%;
+  width: 100%;
+  border: 2px solid #565758;
+  border-radius: 0.1rem;
+  background-color: black;
+  color: #d7dadc;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .keyboard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
 }
 
 .keyboard-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
 }
 
 .keyboard-key {
-    background-color: grey;
-    color: #d7dadc;
-    border-radius: 0.25rem;
-    margin-right: 0.4rem;
-    width: 2.75rem;
-    height: 3.5rem;
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
+  background-color: grey;
+  color: #d7dadc;
+  border-radius: 0.25rem;
+  margin-right: 0.4rem;
+  width: 2.75rem;
+  height: 3.5rem;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.keyboard-key:hover {
-    background-color: darkgrey;
+.keyboard-key:hover,
+.keyboard-key:focus {
+  background-color: darkgrey;
 }
 
-#enter, #backspace {
-    width: 3.5rem;
+#enter,
+#backspace {
+  width: 3.5rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.modal-body {
+  width: 48rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0.5rem;
+}
+
+.line {
+  border-color: #565758;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.fake-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+}
+
+.graph-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  width: 24rem;
+  height: 1rem; 
+  padding-left: 12rem;
+}
+
+.guess {
+    margin-right: 0.5rem;
+}
+
+.graph {
+  width: 100%;
+  height: 100%;
+}
+
+.graph-bar {
+  background-color: #565758;
+  height: 100%;
+}
+
+.green-bar {
+    background-color: #6aaa64;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.graph-body {
+    width: 24rem;
+    display: flex;
+    justify-content: center;
 }

@@ -14,12 +14,11 @@
 <body>
     <main>
         <header>
-            <button class="header-button"><span class="material-icons">help_outline</span></button>
+            <button class="header-button" id="help-button"><span class="material-icons">help_outline</span></button>
             <h1>one letter wordle</h1>
-            <div class="header-menu">
-                <button class="header-button"><span class="material-icons">leaderboard</span></button>
-                <button class="header-button"><span class="material-icons">settings</span></button>
-            </div>
+            <button class="header-button" id="leaderboard-button">
+                <span class="material-icons">leaderboard</span>
+            </button>
         </header>
         <article>
             <div class="board">
@@ -81,6 +80,63 @@
             </div>
         </article>
     </main>
+
+    <div class="modal" id="generic-modal">
+        <div class="modal-body" id="modal-body"></div>
+    </div>
+    <div hidden>
+        <div id="help-modal-body">
+            <div>Guess the WORDLE in five tries.</div>
+            <div>Each guess must be a valid one letter word. Hit the enter button to submit.</div>
+            <div>After each guess, the color of the tiles will change to show how close your guess was to the
+                word.</div>
+            <div>
+                <hr class="line">
+            </div>
+            <div class="bold-text">EXAMPLES</div>
+            <div class="tile fake-tile">I</div>
+            <div>The letter W is in the word and in the correct spot.</div>
+            <div class="tile fake-tile">U</div>
+            <div>The letter U is not in the word in any spot.</div>
+            <div>
+                <hr class="line">
+            </div>
+            <div class="bold-text">A new WORDLE will not be available each day!</div>
+        </div>
+        <div id="leaderboard-modal-body">
+            <div class="bold-text align-center">GUESS DISTRIBUTION</div>
+            <div class="graph-container">
+                <div class="guess">1</div>
+                <div class="graph">
+                    <div class="graph-bar" style="width: 49%;"></div>
+                </div>
+            </div>
+            <div class="graph-container">
+                <div class="guess">2</div>
+                <div class="graph">
+                    <div class="graph-bar" style="width: 49%;"></div>
+                </div>
+            </div>
+            <div class="graph-container">
+                <div class="guess">3</div>
+                <div class="graph">
+                    <div class="graph-bar" style="width: 1%;"></div>
+                </div>
+            </div>
+            <div class="graph-container">
+                <div class="guess">4</div>
+                <div class="graph">
+                    <div class="graph-bar" style="width: 1%;"></div>
+                </div>
+            </div>
+            <div class="graph-container">
+                <div class="guess">5</div>
+                <div class="graph">
+                    <div class="graph-bar green-bar" style="width: 5%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
