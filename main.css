@@ -6,7 +6,8 @@ body {
   background-color: black;
   color: #d7dadc;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 main {
