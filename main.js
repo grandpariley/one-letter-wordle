@@ -22,6 +22,10 @@ window.onload = function () {
       event.target == document.getElementById("share-icon")
     ) {
       navigator.clipboard.writeText(getBoardStateEmojis());
+      document.getElementById("copied-alert-modal").style.display = "flex"
+      setTimeout(function () {
+        document.getElementById("copied-alert-modal").style.display = "none"
+      }, 10 * 1000);
     }
   };
 

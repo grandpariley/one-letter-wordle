@@ -227,3 +227,14 @@ article {
   text-decoration: none;
   cursor: pointer;
 }
+
+.alert-modal {
+    position: fixed;
+    background-color: #d7dadc;
+    color: black;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+}
