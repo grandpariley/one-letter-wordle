@@ -65,7 +65,6 @@
                     <button class="keyboard-key" id="l">l</button>
                 </div>
                 <div class="keyboard-row">
-                    <button class="keyboard-key" id="enter">enter</button>
                     <button class="keyboard-key" id="z">z</button>
                     <button class="keyboard-key" id="x">x</button>
                     <button class="keyboard-key" id="c">c</button>
@@ -73,9 +72,6 @@
                     <button class="keyboard-key" id="b">b</button>
                     <button class="keyboard-key" id="n">n</button>
                     <button class="keyboard-key" id="m">m</button>
-                    <button class="keyboard-key" id="backspace">
-                        <span class="material-icons">backspace</span>
-                    </button>
                 </div>
             </div>
         </article>
@@ -83,6 +79,9 @@
 
     <div class="modal" id="generic-modal">
         <div class="modal-body" id="modal-body"></div>
+    </div>
+    <div class="modal alert-modal" id="copied-alert-modal">
+        <div id="alert-modal-body"></div>
     </div>
     <div hidden>
         <div id="help-modal-body">
@@ -94,9 +93,9 @@
                 <hr class="line">
             </div>
             <div class="bold-text">EXAMPLES</div>
-            <div class="tile fake-tile">I</div>
-            <div>The letter W is in the word and in the correct spot.</div>
-            <div class="tile fake-tile">U</div>
+            <div class="tile fake-tile tile-correct">I</div>
+            <div>The letter I is in the word and in the correct spot.</div>
+            <div class="tile fake-tile tile-wrong">U</div>
             <div>The letter U is not in the word in any spot.</div>
             <div>
                 <hr class="line">
@@ -105,39 +104,52 @@
         </div>
         <div id="leaderboard-modal-body">
             <div class="bold-text align-center">GUESS DISTRIBUTION</div>
-            <div class="graph-container">
+            <div class="align-center">The following chart is not representative of anything and only exists to look pretty</div>
+            <div class="chart-container">
                 <div class="guess">1</div>
-                <div class="graph">
-                    <div class="graph-bar" style="width: 49%;"></div>
+                <div class="chart">
+                    <div class="chart-bar" style="width: 49%;"></div>
                 </div>
             </div>
-            <div class="graph-container">
+            <div class="chart-container">
                 <div class="guess">2</div>
-                <div class="graph">
-                    <div class="graph-bar" style="width: 49%;"></div>
+                <div class="chart">
+                    <div class="chart-bar" style="width: 49%;"></div>
                 </div>
             </div>
-            <div class="graph-container">
+            <div class="chart-container">
                 <div class="guess">3</div>
-                <div class="graph">
-                    <div class="graph-bar" style="width: 1%;"></div>
+                <div class="chart">
+                    <div class="chart-bar" style="width: 1%;"></div>
                 </div>
             </div>
-            <div class="graph-container">
+            <div class="chart-container">
                 <div class="guess">4</div>
-                <div class="graph">
-                    <div class="graph-bar" style="width: 1%;"></div>
+                <div class="chart">
+                    <div class="chart-bar" style="width: 1%;"></div>
                 </div>
             </div>
-            <div class="graph-container">
+            <div class="chart-container">
                 <div class="guess">5</div>
-                <div class="graph">
-                    <div class="graph-bar green-bar" style="width: 5%;"></div>
+                <div class="chart">
+                    <div class="chart-bar green-bar" style="width: 5%;"></div>
+                </div>
+            </div>
+            <div class="leaderboard-footer">
+                <div class="next-answer">
+                    <div>NEXT ANSWER IN</div>
+                    <div class="next-answer-time">NEVER</div>
+                </div>
+                <div class="share-button-container">
+                    <button class="share-button" id="share">SHARE <span id="share-icon" class="material-icons">share</span></button>
                 </div>
             </div>
         </div>
         <div id="winner-modal-body">
-            <div>You win!!</div>
+            <div class="win-text">You win!!</div>
+        </div>
+        <div id="loser-modal-body">
+            <div class="win-text">You lost!!</div>
         </div>
     </div>
 </body>

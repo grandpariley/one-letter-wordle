@@ -17,6 +17,11 @@ window.onload = function () {
   window.onclick = function (event) {
     if (event.target == modal) {
       modal.style.display = "none";
+    } else if (
+      event.target == document.getElementById("share") ||
+      event.target == document.getElementById("share-icon")
+    ) {
+      navigator.clipboard.writeText(getBoardStateEmojis());
     }
   };
 
@@ -39,18 +44,18 @@ function keyEventListener(event) {
   document.getElementById("tile" + round).innerHTML = event.target.id;
   if (document.getElementById("tile" + round).innerHTML === superSecretAnswer) {
     win();
+  } else if (round === 5) {
+    wrongGuess(event.target.id);
+    lost();
   } else {
     wrongGuess(event.target.id);
   }
   round += 1;
-  if (round === 5) {
-    lost();
-  }
 }
 
 function win() {
-  document.getElementById("tile" + round).classList += " tile-correct";
-  document.getElementById(superSecretAnswer).classList += " correct-key";
+  document.getElementById("tile" + round).classList.add("tile-correct");
+  document.getElementById(superSecretAnswer).classList.add("correct-key");
   document.getElementById("modal-body").innerHTML =
     document.getElementById("winner-modal-body").innerHTML +
     document.getElementById("leaderboard-modal-body").innerHTML;
@@ -59,14 +64,32 @@ function win() {
 }
 
 function wrongGuess(guess) {
-  document.getElementById(guess).classList += " disabled-key";
+  document.getElementById(guess).classList.add("disabled-key");
+  document.getElementById("tile" + round).classList.add("tile-wrong");
 }
 
 function lost() {
-  console.log("you lost!");
+  document.getElementById("modal-body").innerHTML =
+    document.getElementById("loser-modal-body").innerHTML +
+    document.getElementById("leaderboard-modal-body").innerHTML;
+  document.getElementById("generic-modal").style.display = "flex";
 }
 
 function getSuperSecretAnswer() {
   var possibleAnswers = ["i", "a"];
   return possibleAnswers[Math.floor(Math.random() * possibleAnswers.length)];
+}
+
+function getBoardStateEmojis() {
+  var boardState = "";
+  for (var i = 1; i <= round - 1; i++) {
+    if (document.getElementById("tile" + i).classList.contains("tile-wrong")) {
+      boardState = boardState.concat("\n:black_large_square:");
+    } else if (
+      document.getElementById("tile" + i).classList.contains("tile-correct")
+    ) {
+      boardState = boardState.concat("\n:green_square:");
+    }
+  }
+  return "One letter wordle #1 ".concat(round - 1, "/5\n", boardState);
 }
