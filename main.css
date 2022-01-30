@@ -188,7 +188,6 @@ article {
 }
 
 .chart-body {
-  width: 24rem;
   display: flex;
   justify-content: center;
 }
@@ -199,8 +198,6 @@ article {
 }
 
 .leaderboard-footer {
-  padding-left: 12rem;
-  padding-right: 12rem;
   display: grid;
   grid-template-columns: auto auto;
 }
