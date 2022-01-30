@@ -142,6 +142,10 @@ article {
   grid-gap: 0.5rem;
 }
 
+.modal-body-templates {
+  display: none;
+}
+
 .line {
   border-color: #565758;
 }
