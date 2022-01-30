@@ -135,7 +135,6 @@ article {
 }
 
 .modal-body {
-  width: 48rem;
   display: grid;
   grid-template-columns: auto;
   grid-gap: 0.5rem;
