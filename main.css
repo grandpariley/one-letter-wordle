@@ -65,6 +65,14 @@ article {
   color: #d7dadc;
   font-size: 2rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.tile-correct {
+  background-color: #6aaa64;
 }
 
 .keyboard {
@@ -95,10 +103,13 @@ article {
   font-weight: bold;
 }
 
-.keyboard-key:hover,
-.keyboard-key:focus {
-  background-color: darkgrey;
+.disabled-key {
+    background-color: black;
 }
+
+.correct-key {
+    background-color: #6aaa64;
+  }
 
 #enter,
 #backspace {
@@ -133,9 +144,6 @@ article {
 }
 
 .fake-tile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 4rem;
   height: 4rem;
 }
@@ -145,12 +153,12 @@ article {
   align-items: center;
   margin-bottom: 0.5rem;
   width: 24rem;
-  height: 1rem; 
+  height: 1rem;
   padding-left: 12rem;
 }
 
 .guess {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .graph {
@@ -164,15 +172,15 @@ article {
 }
 
 .green-bar {
-    background-color: #6aaa64;
+  background-color: #6aaa64;
 }
 
 .align-center {
-    text-align: center;
+  text-align: center;
 }
 
 .graph-body {
-    width: 24rem;
-    display: flex;
-    justify-content: center;
+  width: 24rem;
+  display: flex;
+  justify-content: center;
 }
